@@ -93,7 +93,7 @@ button{
     /* background: linear-gradient(to right, hsl(240, 100%, 56%), hsl(240, 100%, 20%)); */
     background-color: hsl(240, 100%, 60%);
     border: 2px solid white;
-    border-radius: 20px;
+    border-radius: 100px;
     color:white;
     font-size: 2em;
     cursor:pointer;
@@ -142,7 +142,7 @@ button:hover{
 
 .przycisk{
     height: 10%;
-    width: 30%;
+    width: 100%;
 }
 
 #prawy{
@@ -266,7 +266,7 @@ button:hover{
 
 .pasek{
     width: 0;
-    height: 80%;
+    height: 20px;
     background-color: white;
     float:left;
 }
@@ -315,4 +315,11 @@ button:hover{
 
 .orango{
     color:orange;
+}
+
+p,h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1.25rem;
 }

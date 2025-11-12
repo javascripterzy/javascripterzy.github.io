@@ -1,352 +1,514 @@
 const pytania = [
-    {
-        pytanie: "Co jest jednostką natężenia prądu w układzie SI?",
-        odpowiedzi: ["Wolt", "Amper", "Om", "Kulomb"],
-        poprawna: 1
-      },
-      {
-        pytanie: "Jak nazywa się prawo opisujące zależność między napięciem, natężeniem prądu i oporem?",
-        odpowiedzi: ["Prawo Pascala", "Prawo Ohma", "Prawo Archimedesa", "Prawo Coulomba"],
-        poprawna: 1
-      },
-      {
-        pytanie: "Które urządzenie służy do pomiaru napięcia elektrycznego?",
-        odpowiedzi: ["Amperomierz", "Watomierz", "Woltomierz", "Ohmomierz"],
-        poprawna: 2
-      },
-      {
-        pytanie: "Jakie są nośniki prądu w metalach?",
-        odpowiedzi: ["Protony", "Elektrony", "Neutrony", "Jony dodatnie"],
-        poprawna: 1
-      },
-      {
-        pytanie: "Które z poniższych połączeń odbiorników powoduje, że prąd elektryczny rozdziela się na kilka gałęzi?",
-        odpowiedzi: ["Szeregowe", "Równoległe", "Mieszane", "Indukcyjne"],
-        poprawna: 1
-      },
-      {
-        pytanie: "Jakie jest napięcie między dwoma punktami obwodu, jeśli przeniesienie ładunku 1 kulomba wymaga pracy 1 dżula?",
-        odpowiedzi: ["1 wolt", "1 amper", "1 om", "1 wat"],
-        poprawna: 0
-      },
-      {
-        pytanie: "Które urządzenie może pełnić funkcję zarówno amperomierza, jak i woltomierza?",
-        odpowiedzi: ["Multimetr", "Transformator", "Oscyloskop", "Rezystor"],
-        poprawna: 0
-      },
-      {
-        pytanie: "Co jest niezbędne do powstania prądu elektrycznego w obwodzie?",
-        odpowiedzi: ["Opór", "Napięcie", "Moc", "Ładunek"],
-        poprawna: 1
-      },
-      {
-        pytanie: "Jak nazywa się uporządkowany ruch cząstek obdarzonych ładunkiem elektrycznym?",
-        odpowiedzi: ["Prąd elektryczny", "Napięcie elektryczne", "Opór elektryczny", "Moc elektryczna"],
-        poprawna: 0
-      },
-      {
-        pytanie: "Która z poniższych wielkości jest miarą zdolności przewodnika do przeciwstawiania się przepływowi prądu?",
-        odpowiedzi: ["Napięcie", "Natężenie", "Opór", "Moc"],
-        poprawna: 2
-      },
-      {
-      pytanie: "Jakie zjawisko zachodzi przy pocieraniu dwóch ciał, np. linijki o włosy?",
-      odpowiedzi: ["Indukcja elektromagnetyczna", "Przepływ prądu", "Elektrostatyka", "Przemiana chemiczna"],
-      poprawna: 2
-    },
-    {
-      pytanie: "Czym są przewodniki elektryczne?",
-      odpowiedzi: ["Ciałami, które nie przewodzą prądu", "Ciałami, przez które przepływa prąd", "Ciałami bez ładunku", "Ciałami izolującymi elektron"], 
-      poprawna: 1
-    },
-    {
-      pytanie: "Jakie cząstki odpowiadają za przewodnictwo prądu w metalach?",
-      odpowiedzi: ["Jony dodatnie", "Neutrony", "Swobodne elektrony", "Protony"],
-      poprawna: 2
-    },
-    {
-      pytanie: "Który z materiałów najlepiej przewodzi prąd elektryczny?",
-      odpowiedzi: ["Guma", "Szkło", "Miedź", "Drewno"],
-      poprawna: 2
-    },
-    {
-      pytanie: "Jak zmieni się natężenie prądu w obwodzie szeregowym, jeśli dołożymy kolejny opornik?",
-      odpowiedzi: ["Zwiększy się", "Zmniejszy się", "Nie zmieni się", "Zniknie całkowicie"],
-      poprawna: 1
-    },
-    {
-      pytanie: "Jaką funkcję pełni bezpiecznik w obwodzie elektrycznym?",
-      odpowiedzi: ["Zwiększa napięcie", "Zamienia prąd na ciepło", "Chroni przed przeciążeniem", "Łączy przewody"],
-      poprawna: 2
-    },
-    {
-      pytanie: "Które połączenie odbiorników umożliwia ich niezależne działanie?",
-      odpowiedzi: ["Szeregowe", "Równoległe", "Mieszane", "Napięciowe"],
-      poprawna: 1
-    },
-    {
-      pytanie: "Co oznacza, że ciało jest naładowane dodatnio?",
-      odpowiedzi: ["Ma więcej neutronów", "Ma więcej elektronów", "Ma więcej protonów niż elektronów", "Ma więcej ciepła"],
-      poprawna: 2
-    },
-    {
-      pytanie: "Który przyrząd mierzy opór elektryczny?",
-      odpowiedzi: ["Amperomierz", "Rezystor", "Omomierz", "Woltomierz"],
-      poprawna: 2
-    },
-    {
-      pytanie: "Jakie jest oznaczenie napięcia elektrycznego w fizyce?",
-      odpowiedzi: ["I", "R", "P", "U"],
-      poprawna: 3
-    },
-    {
-    pytanie: "Co się stanie, gdy przerwiesz obwód elektryczny?",
-    odpowiedzi: ["Zwiększy się napięcie", "Prąd przestanie płynąć", "Prąd zacznie płynąć szybciej", "Opór zniknie"],
-    poprawna: 1
-  },
   {
-    pytanie: "Jaki symbol oznacza opór elektryczny?",
-    odpowiedzi: ["R", "U", "I", "P"],
-    poprawna: 0
-  },
-  {
-    pytanie: "Która z jednostek jest odpowiednia dla pracy elektrycznej?",
-    odpowiedzi: ["Wolt", "Dżul", "Amper", "Om"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Który z poniższych materiałów jest izolatorem?",
-    odpowiedzi: ["Aluminium", "Srebro", "Guma", "Miedź"],
-    poprawna: 2
-  },
-  {
-    pytanie: "W jakim połączeniu odbiorników napięcie jest takie samo dla każdego z nich?",
-    odpowiedzi: ["Szeregowe", "Równoległe", "Indukcyjne", "Mieszane"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Jaką jednostkę ma moc elektryczna w układzie SI?",
-    odpowiedzi: ["Dżul", "Wat", "Wolt", "Amper"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Jakie zjawisko powoduje powstanie iskry podczas dotknięcia klamki po pocieraniu dywanu?",
-    odpowiedzi: ["Przepływ ciepła", "Elektryzowanie przez indukcję", "Wzrost oporu", "Rozładowanie ładunku elektrostatycznego"],
+    pytanie: "Jakiego języka skryptowego używa się do tworzenia dynamicznych stron WWW po stronie klienta?",
+    odpowiedzi: ["C#", "Perl", "PHP", "JavaScript"],
     poprawna: 3
   },
   {
-    pytanie: "Jakie napięcie ma typowa bateria AA (paluszek)?",
-    odpowiedzi: ["9 V", "1,5 V", "3 V", "4,5 V"],
-    poprawna: 1
+    pytanie: "Jak nazywa się technika umożliwiająca asynchroniczną komunikację z serwerem bez przeładowania strony?",
+    odpowiedzi: ["PHP", "XML", "AJAX", "VBScript"],
+    poprawna: 2
   },
   {
-    pytanie: "Które połączenie zapewnia mniejsze zużycie prądu, ale większy opór całkowity?",
-    odpowiedzi: ["Szeregowe", "Równoległe", "Mieszane", "Krzyżowe"],
+    pytanie: "W jaki sposób deklaruje się zmienną w JavaScript?",
+    odpowiedzi: ["var, let lub const", "int lub float", "dim lub set", "declare variable"],
     poprawna: 0
   },
   {
-    pytanie: "Która wielkość opisuje szybkość przepływu ładunku?",
-    odpowiedzi: ["Napięcie", "Opór", "Natężenie prądu", "Moc"],
-    poprawna: 2
+    pytanie: "Jakiego typu danych nie ma w JavaScript?",
+    odpowiedzi: ["String", "Number", "Boolean", "Integer"],
+    poprawna: 3
   },
   {
-    pytanie: "Która jednostka jest jednostką ładunku elektrycznego?",
-    odpowiedzi: ["Kulomb", "Wolt", "Amper", "Dżul"],
+    pytanie: "Jakiego operatora używa się do porównania wartości bez uwzględniania typu?",
+    odpowiedzi: ["==", "===", "!=", "!=="],
     poprawna: 0
   },
   {
-    pytanie: "Jakie połączenie żarówek powoduje, że po przepaleniu jednej pozostałe przestają świecić?",
-    odpowiedzi: ["Równoległe", "Szeregowe", "Mieszane", "Transformatorowe"],
+    pytanie: "Jakiego operatora używa się do porównania wartości wraz z typem?",
+    odpowiedzi: ["==", "===", "!=", "!=="],
     poprawna: 1
   },
   {
-    pytanie: "Które urządzenie służy do magazynowania ładunku elektrycznego?",
-    odpowiedzi: ["Rezystor", "Kondensator", "Cewka", "Woltomierz"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Jakie zjawisko opisuje związek pomiędzy pracą a napięciem i ładunkiem?",
-    odpowiedzi: ["Prawo Ohma", "Definicja mocy", "Praca prądu elektrycznego", "Prawo Coulomba"],
-    poprawna: 2
-  },
-  {
-    pytanie: "W jakim materiale elektrony są swobodne i mogą się poruszać?",
-    odpowiedzi: ["W izolatorze", "W przewodniku", "W próżni", "W powietrzu"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Co to jest prąd stały?",
-    odpowiedzi: ["Prąd, który zmienia kierunek", "Prąd o zmiennym natężeniu", "Prąd o stałym kierunku przepływu", "Prąd przemienny"],
-    poprawna: 2
-  },
-  {
-    pytanie: "Które zjawisko wykorzystywane jest w akumulatorach?",
-    odpowiedzi: ["Spalanie", "Reakcje chemiczne", "Elektryzowanie", "Fale elektromagnetyczne"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Ile wynosi napięcie sieci elektrycznej w gniazdkach domowych w Polsce?",
-    odpowiedzi: ["110 V", "230 V", "12 V", "400 V"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Co się stanie z oporem, jeśli długość przewodnika się zwiększy?",
-    odpowiedzi: ["Zmniejszy się", "Zwiększy się", "Nie zmieni się", "Zależy od napięcia"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Jak obliczyć moc prądu elektrycznego?",
-    odpowiedzi: ["P = U / I", "P = I × U", "P = R / I", "P = U × R"],
-    poprawna: 1
-  },
-   {
-    pytanie: "Jakie są jednostki mocy elektrycznej?",
-    odpowiedzi: ["Dżule", "Waty", "Omy", "Kulomby"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Który przyrząd chroni instalację przed skutkami zwarcia?",
-    odpowiedzi: ["Wyłącznik różnicowoprądowy", "Bezpiecznik", "Woltomierz", "Rezystor"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Co oznacza symbol I w fizyce?",
-    odpowiedzi: ["Napięcie", "Opór", "Natężenie prądu", "Moc"],
-    poprawna: 2
-  },
-  {
-    pytanie: "Jakie połączenie odbiorników jest najczęściej stosowane w instalacjach domowych?",
-    odpowiedzi: ["Szeregowe", "Równoległe", "Indukcyjne", "Krzyżowe"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Jakie urządzenie może zamieniać energię elektryczną na energię mechaniczną?",
-    odpowiedzi: ["Żarówka", "Grzałka", "Silnik", "Akumulator"],
-    poprawna: 2
-  },
-  {
-    pytanie: "Co to jest napięcie elektryczne?",
-    odpowiedzi: ["Ruch elektronów", "Siła między elektronami", "Różnica potencjałów", "Energia cieplna"],
-    poprawna: 2
-  },
-  {
-    pytanie: "Jakie urządzenie służy do zwiększania lub zmniejszania napięcia prądu przemiennego?",
-    odpowiedzi: ["Transformator", "Woltomierz", "Akumulator", "Dioda"],
+    pytanie: "Jak nazywa się funkcja wbudowana, która konwertuje tekst na liczbę?",
+    odpowiedzi: ["parseInt()", "toNumber()", "Number.parse()", "int()"],
     poprawna: 0
   },
   {
-    pytanie: "Które z wymienionych ciał najlepiej izoluje prąd elektryczny?",
-    odpowiedzi: ["Miedź", "Szkło", "Aluminium", "Złoto"],
+    pytanie: "Który z typów danych w JavaScript może przyjmować wartość true lub false?",
+    odpowiedzi: ["Number", "Boolean", "String", "Array"],
     poprawna: 1
   },
   {
-    pytanie: "Co powoduje większy opór: dłuższy czy krótszy przewodnik (z tego samego materiału)?",
-    odpowiedzi: ["Dłuższy", "Krótszy", "Nie ma wpływu", "Zależy od natężenia prądu"],
+    pytanie: "Jak deklaruje się funkcję w JavaScript?",
+    odpowiedzi: ["function nazwa() {}", "def nazwa() {}", "func nazwa() {}", "method nazwa() {}"],
     poprawna: 0
   },
   {
-    pytanie: "Jak nazywa się zjawisko przekształcania energii mechanicznej w elektryczną?",
-    odpowiedzi: ["Elektryzowanie", "Indukcja elektromagnetyczna", "Polaryzacja", "Opór czynny"],
+    pytanie: "Która metoda tablicy służy do dodawania elementu na końcu?",
+    odpowiedzi: ["push()", "pop()", "shift()", "unshift()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda tablicy usuwa ostatni element?",
+    odpowiedzi: ["push()", "pop()", "shift()", "unshift()"],
     poprawna: 1
   },
   {
-    pytanie: "Która z wielkości fizycznych nie zależy od czasu?",
-    odpowiedzi: ["Moc", "Praca", "Natężenie", "Ładunek"],
+    pytanie: "Jakiego słowa kluczowego używa się do sprawdzenia warunku?",
+    odpowiedzi: ["if", "for", "while", "switch"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Które słowo kluczowe wprowadza pętlę iterującą określoną liczbę razy?",
+    odpowiedzi: ["if", "for", "while", "switch"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Które słowo kluczowe tworzy pętlę warunkową sprawdzającą warunek przed wykonaniem kodu?",
+    odpowiedzi: ["do...while", "while", "for", "switch"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Która metoda stringa zwraca długość tekstu?",
+    odpowiedzi: ["length()", "size()", "length", "count()"],
     poprawna: 2
   },
   {
-    pytanie: "Jakie zjawisko wykorzystywane jest w mikrofonach i głośnikach?",
-    odpowiedzi: ["Indukcja", "Rezonans", "Prąd stały", "Pole magnetyczne"],
+    pytanie: "Jak odwołać się do elementu HTML po jego id w JavaScript?",
+    odpowiedzi: ["getElementById()", "querySelector()", "getElementsByClassName()", "getElementsByTagName()"],
     poprawna: 0
   },
   {
-    pytanie: "Ile wynosi ładunek jednego elektronu?",
-    odpowiedzi: ["0 C", "1 C", "1,6 × 10⁻¹⁹ C", "9,8 N"],
+    pytanie: "Jak w JavaScript definiuje się stałą, której wartość nie może być zmieniona?",
+    odpowiedzi: ["var", "let", "const", "static"],
+    poprawna: 2
+  },
+
+
+  {
+    pytanie: "Jakiego zdarzenia używa się do wykrycia kliknięcia myszką?",
+    odpowiedzi: ["onmouseover", "onclick", "onchange", "onfocus"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Która metoda dodaje nowy element DOM do rodzica?",
+    odpowiedzi: ["appendChild()", "insertBefore()", "createElement()", "getElementById()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Które zdarzenie wykrywa zmianę wartości w polu input?",
+    odpowiedzi: ["onchange", "onclick", "oninput", "onkeypress"],
+    poprawna: 0
+  },
+
+  {
+    pytanie: "Jakiego słowa kluczowego używa się, aby zakończyć pętlę lub switch?",
+    odpowiedzi: ["break", "stop", "exit", "return"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Jakiego słowa kluczowego używa się do kontynuowania następnej iteracji pętli?",
+    odpowiedzi: ["continue", "next", "skip", "break"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Który operator służy do łączenia stringów w JavaScript?",
+    odpowiedzi: ["+", "&", "concat()", "*"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która funkcja wyświetla tekst w konsoli przeglądarki?",
+    odpowiedzi: ["console.log()", "alert()", "print()", "echo()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która funkcja wyświetla okno alertu?",
+    odpowiedzi: ["console.log()", "alert()", "prompt()", "confirm()"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Która funkcja wyświetla okno z możliwością wprowadzenia tekstu przez użytkownika?",
+    odpowiedzi: ["console.log()", "alert()", "prompt()", "confirm()"],
     poprawna: 2
   },
   {
-    pytanie: "Które urządzenie zmienia prąd stały na przemienny?",
-    odpowiedzi: ["Rezystor", "Falownik", "Woltomierz", "Kondensator"],
-    poprawna: 1
+    pytanie: "Która funkcja wyświetla okno z potwierdzeniem (OK/Cancel)?",
+    odpowiedzi: ["console.log()", "alert()", "prompt()", "confirm()"],
+    poprawna: 3
   },
   {
-    pytanie: "Jak nazywa się opór stawiany przez urządzenia w obwodzie?",
-    odpowiedzi: ["Rezystancja", "Moc", "Natężenie", "Ładunek"],
-    poprawna: 0
-  },
-  {
-    pytanie: "Która wartość opisuje łączną ilość energii dostarczonej przez prąd w czasie?",
-    odpowiedzi: ["Moc", "Natężenie", "Praca", "Napięcie"],
+    pytanie: "Który typ pętli gwarantuje wykonanie ciała przynajmniej raz?",
+    odpowiedzi: ["while", "for", "do...while", "foreach"],
     poprawna: 2
   },
   {
-    pytanie: "W jakim kierunku poruszają się elektrony w przewodniku?",
-    odpowiedzi: ["Od plusa do minusa", "Od minusa do plusa", "W losowych kierunkach", "Od środka przewodnika na zewnątrz"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Jak nazywa się proces usuwania ładunku z ciała?",
-    odpowiedzi: ["Polaryzacja", "Uziemienie", "Izolacja", "Indukcja"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Które urządzenie może chronić człowieka przed porażeniem prądem?",
-    odpowiedzi: ["Bezpiecznik", "Transformator", "Wyłącznik różnicowoprądowy", "Kondensator"],
+    pytanie: "Co zwraca metoda array.includes(element)?",
+    odpowiedzi: ["element", "index", "true/false", "nic"],
     poprawna: 2
   },
   {
-    pytanie: "Co dzieje się z napięciem, gdy odbiorniki są połączone szeregowo?",
-    odpowiedzi: ["Dzieli się między odbiorniki", "Pozostaje bez zmian", "Znika", "Zwiększa się"],
-    poprawna: 0
+    pytanie: "Jak sprawdzić, czy zmienna jest tablicą?",
+    odpowiedzi: ["typeof x === 'array'", "x instanceof Array", "Array.isArray(x)", "Obie B i C są prawidłowe"],
+    poprawna: 3
   },
   {
-    pytanie: "Czym są jonami?",
-    odpowiedzi: ["Neutralnymi atomami", "Naładowanymi cząstkami", "Elektronami", "Cząstkami światła"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Który z materiałów jest półprzewodnikiem?",
-    odpowiedzi: ["Miedź", "Krzem", "Guma", "Złoto"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Co się dzieje, gdy opór rośnie, a napięcie jest stałe?",
-    odpowiedzi: ["Prąd rośnie", "Prąd maleje", "Prąd się nie zmienia", "Napięcie spada"],
-    poprawna: 1
-  },
-  {
-    pytanie: "Który z tych elementów magazynuje energię w polu elektrycznym?",
-    odpowiedzi: ["Kondensator", "Rezystor", "Cewka", "Dioda"],
-    poprawna: 0
-  },
-  {
-    pytanie: "Które połączenie elementów obwodu elektrycznego pozwala na niezależne włączanie i wyłączanie urządzeń?",
-    odpowiedzi: ["Szeregowe", "Równoległe", "Indukcyjne", "Bezpośrednie"],
-    poprawna: 1
-  },
-  {
-    pytanie: "W jakiej jednostce mierzymy rezystancję?",
-    odpowiedzi: ["Wolty", "Ampery", "Omy", "Kulomby"],
+    pytanie: "Który operator logiczny oznacza negację?",
+    odpowiedzi: ["&&", "||", "!", "~"],
     poprawna: 2
   },
   {
-    pytanie: "Jaki jest kierunek konwencjonalny przepływu prądu?",
-    odpowiedzi: ["Od plusa do minusa", "Od minusa do plusa", "Dowolny", "Od środka przewodnika"],
+    pytanie: "Który operator logiczny oznacza koniunkcję (AND)?",
+    odpowiedzi: ["&&", "||", "!", "&"],
     poprawna: 0
   },
   {
-    pytanie: "Jaką rolę pełni obwód zamknięty w przepływie prądu?",
-    odpowiedzi: ["Zatrzymuje prąd", "Umożliwia jego przepływ", "Zwiększa napięcie", "Zmniejsza opór"],
+    pytanie: "Który operator logiczny oznacza alternatywę (OR)?",
+    odpowiedzi: ["&&", "||", "!", "|"],
     poprawna: 1
   },
   {
-    pytanie: "Które urządzenie służy do zapisywania przebiegów napięcia i prądu?",
-    odpowiedzi: ["Multimetr", "Oscyloskop", "Woltomierz", "Amperomierz"],
+    pytanie: "Co zwraca metoda string.toUpperCase()?",
+    odpowiedzi: ["tekst w dużych literach", "tekst w małych literach", "pierwszą literę wielką", "nic"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Co zwraca metoda string.toLowerCase()?",
+    odpowiedzi: ["tekst w dużych literach", "tekst w małych literach", "pierwszą literę wielką", "nic"],
     poprawna: 1
   },
   {
-    pytanie: "Który element zwiększa rezystancję w obwodzie?",
-    odpowiedzi: ["Woltomierz", "Rezystor", "Amperomierz", "Transformator"],
+    pytanie: "Która metoda tablicy zwraca nową tablicę z wybranych elementów?",
+    odpowiedzi: ["filter()", "map()", "reduce()", "forEach()"],
+    poprawna: 0
+  },
+
+  {
+    pytanie: "Jakiego zdarzenia używa się do wykrycia ruchu myszką?",
+    odpowiedzi: ["onclick", "onmousemove", "onkeypress", "onload"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Jakiego zdarzenia używa się, aby wykryć załadowanie strony?",
+    odpowiedzi: ["onload", "DOMContentLoaded", "onready", "onopen"],
+    poprawna: 0
+  },
+
+  {
+    pytanie: "Które słowo kluczowe tworzy obiekt?",
+    odpowiedzi: ["new", "object", "create", "instance"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Jakiego słowa kluczowego używa się, aby zdefiniować klasę w JS?",
+    odpowiedzi: ["class", "function", "object", "type"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda obiektu Math zwraca liczbę losową z przedziału 0–1?",
+    odpowiedzi: ["Math.random()", "Math.floor()", "Math.ceil()", "Math.round()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda obiektu Math zaokrągla w dół do najbliższej liczby całkowitej?",
+    odpowiedzi: ["Math.random()", "Math.floor()", "Math.ceil()", "Math.round()"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Która metoda obiektu Math zaokrągla w górę do najbliższej liczby całkowitej?",
+    odpowiedzi: ["Math.random()", "Math.floor()", "Math.ceil()", "Math.round()"],
+    poprawna: 2
+  },
+  {
+    pytanie: "Która metoda obiektu Math zaokrągla do najbliższej liczby całkowitej?",
+    odpowiedzi: ["Math.random()", "Math.floor()", "Math.ceil()", "Math.round()"],
+    poprawna: 3
+  },
+  {
+    pytanie: "Co zwraca wyrażenie '5' - 2 w JavaScript?",
+    odpowiedzi: ["3", "'52'", "NaN", "TypeError"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Jakiego typu danych jest null w JavaScript?",
+    odpowiedzi: ["object", "null", "undefined", "string"],
+    poprawna: 0
+  },
+
+
+
+  {
+    pytanie: "Jakiego operatora używa się do sprawdzenia nierówności wartości?",
+    odpowiedzi: ["!=", "!==", "==", "==="],
+    poprawna: 0
+  },
+  {
+    pytanie: "Jakiego operatora używa się do sprawdzenia nierówności wartości i typu?",
+    odpowiedzi: ["!=", "!==", "==", "==="],
+    poprawna: 1
+  },
+  {
+    pytanie: "Jakiego operatora używa się do inkrementacji zmiennej?",
+    odpowiedzi: ["++", "--", "+=", "*="],
+    poprawna: 0
+  },
+  {
+    pytanie: "Jakiego operatora używa się do dekrementacji zmiennej?",
+    odpowiedzi: ["++", "--", "-=", "/="],
+    poprawna: 1
+  },
+  {
+    pytanie: "Co zwraca parseInt('10abc')?",
+    odpowiedzi: ["10", "NaN", "'10abc'", "0"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Co zwraca parseFloat('3.14abc')?",
+    odpowiedzi: ["3.14", "NaN", "'3.14abc'", "0"],
+    poprawna: 0
+  },
+
+  {
+    pytanie: "Jak w JS sprawdzisz, czy zmienna x jest większa lub równa 10?",
+    odpowiedzi: ["x => 10", "x >= 10", "x =>= 10", "x = 10"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Jak w JS sprawdzisz, czy zmienna x jest mniejsza lub równa 5?",
+    odpowiedzi: ["x <= 5", "x < 5", "x =< 5", "x => 5"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda stringa usuwa białe znaki na początku i końcu tekstu?",
+    odpowiedzi: ["trim()", "slice()", "substr()", "replace()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda stringa zwraca podciąg od określonego indeksu?",
+    odpowiedzi: ["slice()", "split()", "substr()", "trim()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda stringa zwraca podciąg o określonej długości od startu?",
+    odpowiedzi: ["slice()", "substr()", "substring()", "split()"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Która metoda stringa dzieli tekst na tablicę według separatora?",
+    odpowiedzi: ["slice()", "split()", "substr()", "substring()"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Która metoda stringa zwraca część tekstu między dwoma indeksami?",
+    odpowiedzi: ["slice()", "substr()", "substring()", "split()"],
+    poprawna: 2
+  },
+  {
+    pytanie: "Która metoda tablicy odwraca kolejność elementów?",
+    odpowiedzi: ["reverse()", "sort()", "map()", "filter()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda tablicy sortuje elementy?",
+    odpowiedzi: ["reverse()", "sort()", "map()", "filter()"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Która metoda tablicy tworzy nową tablicę z wynikami działania funkcji na każdym elemencie?",
+    odpowiedzi: ["map()", "filter()", "reduce()", "forEach()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda tablicy filtruje elementy spełniające warunek?",
+    odpowiedzi: ["map()", "filter()", "reduce()", "forEach()"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Która metoda tablicy zmniejsza wszystkie elementy do jednej wartości?",
+    odpowiedzi: ["map()", "filter()", "reduce()", "forEach()"],
+    poprawna: 2
+  },
+  {
+    pytanie: "Która metoda tablicy wykonuje funkcję dla każdego elementu, ale nie zwraca nowej tablicy?",
+    odpowiedzi: ["map()", "filter()", "reduce()", "forEach()"],
+    poprawna: 3
+  },
+
+
+
+  {
+    pytanie: "Co zwraca Number('123')?",
+    odpowiedzi: ["123", "'123'", "NaN", "undefined"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Który operator łańcuchowy używa się do łączenia kilku warunków?",
+    odpowiedzi: ["&&", "||", "?", ":"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Który operator warunkowy stosuje się jako skrót if...else?",
+    odpowiedzi: ["&&", "||", "?", ":"],
+    poprawna: 2
+  },
+  {
+    pytanie: "Która metoda obiektu Date zwraca aktualną datę i czas?",
+    odpowiedzi: ["Date.now()", "new Date()", "Date.get()", "Date.today()"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Która metoda obiektu Date zwraca rok?",
+    odpowiedzi: ["getFullYear()", "getYear()", "year()", "getDate()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda obiektu Date zwraca miesiąc (0–11)?",
+    odpowiedzi: ["getMonth()", "getUTCMonth()", "getDate()", "getDay()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda obiektu Date zwraca dzień tygodnia (0–6)?",
+    odpowiedzi: ["getDate()", "getDay()", "getMonth()", "getFullYear()"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Która metoda obiektu Date zwraca godziny?",
+    odpowiedzi: ["getHours()", "getMinutes()", "getSeconds()", "getTime()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda obiektu Date zwraca minuty?",
+    odpowiedzi: ["getHours()", "getMinutes()", "getSeconds()", "getTime()"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Która metoda obiektu Date zwraca sekundy?",
+    odpowiedzi: ["getHours()", "getMinutes()", "getSeconds()", "getTime()"],
+    poprawna: 2
+  },
+  {
+    pytanie: "Która metoda obiektu Date zwraca czas w milisekundach od 1 stycznia 1970?",
+    odpowiedzi: ["getTime()", "now()", "Date()", "timestamp()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda konwertuje liczbę na string?",
+    odpowiedzi: ["toString()", "String()", "Number()", "parseInt()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda konwertuje string na liczbę całkowitą?",
+    odpowiedzi: ["toInt()", "Number()", "parseInt()", "parseFloat()"],
+    poprawna: 2
+  },
+  {
+    pytanie: "Która metoda konwertuje string na liczbę zmiennoprzecinkową?",
+    odpowiedzi: ["toInt()", "Number()", "parseInt()", "parseFloat()"],
+    poprawna: 3
+  },
+  {
+    pytanie: "Co zwraca [].length dla pustej tablicy?",
+    odpowiedzi: ["0", "1", "undefined", "null"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Co zwraca [1,2,3].length?",
+    odpowiedzi: ["2", "3", "undefined", "4"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Jakiego zdarzenia używa się, aby wykryć wciśnięcie klawisza?",
+    odpowiedzi: ["onkeydown", "onkeypress", "onkeyup", "wszystkie powyższe"],
+    poprawna: 3
+  },
+  {
+    pytanie: "Która metoda DOM usuwa element?",
+    odpowiedzi: ["remove()", "delete()", "removeChild()", "erase()"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Która metoda DOM usuwa element dziecko od rodzica?",
+    odpowiedzi: ["remove()", "delete()", "removeChild()", "erase()"],
+    poprawna: 2
+  },
+    {
+    pytanie: "Jak utworzyć nowy obiekt w JavaScript?",
+    odpowiedzi: ["let obj = {}", "let obj = []", "let obj = ()", "let obj = ''"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Jak dodać nową właściwość do istniejącego obiektu?",
+    odpowiedzi: ["obj.wlasciwosc = 5", "obj.add('wlasciwosc',5)", "obj.push('wlasciwosc',5)", "obj.insert('wlasciwosc',5)"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Jak odczytać wartość właściwości obiektu?",
+    odpowiedzi: ["obj.wlasciwosc", "obj.get('wlasciwosc')", "obj[wlasciwosc]", "obj.value('wlasciwosc')"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Jak odwołać się do elementu HTML po jego id?",
+    odpowiedzi: ["document.getElementById('id')", "document.querySelectorAll('id')", "document.getElementsByTagName('id')", "document.querySelector('class')"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Jak odwołać się do wszystkich elementów o danej klasie?",
+    odpowiedzi: ["document.querySelectorAll('klasa')", "document.getElementsByClassName('klasa')", "document.getElementById('klasa')", "document.querySelector('class')"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Jak odwołać się do pierwszego elementu pasującego do selektora CSS?",
+    odpowiedzi: ["document.getElementsByTagName('selector')", "document.querySelectorAll('selector')", "document.querySelector('selector')", "document.getElementById('selector')"],
+    poprawna: 2
+  },
+  {
+    pytanie: "Jak odwołać się do wszystkich elementów pasujących do selektora CSS?",
+    odpowiedzi: ["document.getElementsByClassName('selector')", "document.querySelector('selector')", "document.getElementsByTagName('selector')", "document.querySelectorAll('selector')"],
+    poprawna: 3
+  },
+  {
+    pytanie: "Jak zmienić tekst wewnątrz elementu HTML?",
+    odpowiedzi: ["element.value = 'tekst'", "element.textContent = 'tekst'", "element.innerHTML = 0", "element.setText('tekst')"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Jak zmienić zawartość HTML elementu?",
+    odpowiedzi: ["element.innerHTML = '<p>Nowy tekst</p>'", "element.value = '<p>Nowy tekst</p>'", "element.textContent = '<p>Nowy tekst</p>'", "element.setHTML('<p>Nowy tekst</p>')"],
+    poprawna: 0
+  },
+  {
+    pytanie: "Jak dodać nowy element DOM do rodzica?",
+    odpowiedzi: ["parent.createChild(child)", "parent.insert(child)", "parent.appendChild(child)", "parent.addChild(child)"],
+    poprawna: 2
+  },
+  {
+    pytanie: "Jak usunąć element DOM?",
+    odpowiedzi: ["element.delete()", "element.remove()", "parent.removeChild(element)", "element.destroy()"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Jak usunąć element dziecko od rodzica?",
+    odpowiedzi: ["child.remove()", "parent.removeChild(child)", "child.destroy()", "parent.deleteChild(child)"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Jak zmienić atrybut elementu HTML?",
+    odpowiedzi: ["element.attr('nazwa','wartosc')", "element.updateAttribute('nazwa','wartosc')", "element.setAttribute('nazwa','wartosc')", "element.change('nazwa','wartosc')"],
+    poprawna: 2
+  },
+  {
+    pytanie: "Jak pobrać wartość atrybutu elementu HTML?",
+    odpowiedzi: ["element.attr('nazwa')", "element.readAttribute('nazwa')", "element.getAttribute('nazwa')", "element.value('nazwa')"],
+    poprawna: 2
+  },
+  {
+    pytanie: "Jak dodać klasę do elementu?",
+    odpowiedzi: ["element.className = 'nowa-klasa'", "element.classList.add('nowa-klasa')", "element.setClass('nowa-klasa')", "element.addClass('nowa-klasa')"],
+    poprawna: 1
+  },
+  {
+    pytanie: "Jak usunąć klasę z elementu?",
+    odpowiedzi: ["element.className = ''", "element.classList.remove('klasa')", "element.deleteClass('klasa')", "element.removeClass('klasa')"],
     poprawna: 1
   }
-  ];
+];

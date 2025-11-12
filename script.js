@@ -84,6 +84,7 @@ let pokazPytanie = () => {
     });
 };
 
+//start quiz
 start.addEventListener("click",()=>{
     mainmenu.style.display = "none";
     menu.style.display = "block";
@@ -92,18 +93,37 @@ start.addEventListener("click",()=>{
     document.getElementById('przyciskiNuta').style.display = "none";
     pokazPytanie();
     liczCzas();
+      setTimeout(() => {    
+      if(a < 3){
+            document.getElementById('muzyczkaGra').currentTime = 0
+            document.getElementById('muzyczkaGra').play();
+
+          }else if(a < 9){
+            document.getElementById('muzyczkaTrudna').currentTime = 0
+            document.getElementById('muzyczkaTrudna').play();            
+          }else{
+            document.getElementById('muzyczkaSuperTrudna').currentTime = 0
+            document.getElementById('muzyczkaSuperTrudna').play();                     
+          }
+        },2000)
+
     document.getElementById('bgMusic').pause();
     document.getElementById("startGry").play();
 })
 
 
+//pokaz odpowiedzi
 odpowiedzi.forEach(e => {
     e.addEventListener("click",() => {
-        document.getElementById("select").play();
+      document.getElementById('muzyczkaGra').pause();  
+      document.getElementById('muzyczkaTrudna').pause();  
+      document.getElementById('muzyczkaSuperTrudna').pause(); 
+      document.getElementById("select").play();
+      document.getElementById('friend').pause();
         if(czyodp == false){
             publicznoscOkno.style.display = "none";
             telefonOkno.style.display = "none";
-
+            
             e.classList.add("czekaj");
             czyodp = true;
             setTimeout(() => {
@@ -135,11 +155,27 @@ odpowiedzi.forEach(e => {
     })
 });
 
+
 nastepne.addEventListener("click",() => {
         szczebel[szczebelIndex].classList.remove("pogrubienie");
         szczebelIndex--;
         pokazPytanie();
         document.getElementById("startGry").play();
+      setTimeout(() => {    
+      if(a < 3){
+            document.getElementById('muzyczkaGra').currentTime = 0
+            document.getElementById('muzyczkaGra').play();
+
+          }else if(a < 9){
+            document.getElementById('muzyczkaTrudna').currentTime = 0
+            document.getElementById('muzyczkaTrudna').play();            
+          }else{
+            document.getElementById('muzyczkaSuperTrudna').currentTime = 0
+            document.getElementById('muzyczkaSuperTrudna').play();                     
+          }
+        },2000)    
+        
+        
 })
 
 let wroc = () => {
@@ -150,8 +186,10 @@ fortyforty = document.getElementById("5050");
 publicznosc = document.getElementById("publicznosc");
 telefon = document.getElementById("telefon");
 
+//50-50
 fortyforty.addEventListener("click",() =>{
     if(!fortyforty.classList.contains("kolonieaktywne")){
+        document.getElementById('fiftyfifty').play();
         niepoprawne = Array.from(odpowiedzi);
 
         niepoprawne.splice(p.poprawna,1);
@@ -167,8 +205,10 @@ fortyforty.addEventListener("click",() =>{
     }
 })
 
+//publicznosc
 publicznosc.addEventListener("click",()=>{
   if(!publicznosc.classList.contains("kolonieaktywne")){
+  document.getElementById('fiftyfifty').play();
   publicznoscOkno.style.display = "block";
   let procenty = [];
   procenty.push(Math.floor(Math.random() * 51) + 50);
@@ -193,8 +233,13 @@ publicznosc.addEventListener("click",()=>{
 }
 })
 
+//telefon
 telefon.addEventListener("click", () => {
   if(!telefon.classList.contains("kolonieaktywne")){
+    document.getElementById('friend').play();
+      document.getElementById('muzyczkaGra').pause();  
+      document.getElementById('muzyczkaTrudna').pause();  
+      document.getElementById('muzyczkaSuperTrudna').pause(); 
     telefonOkno.style.display = "block";
     let literki = ["A","B","C","D"];
     document.getElementById("porada").innerHTML += literki[p.poprawna];
