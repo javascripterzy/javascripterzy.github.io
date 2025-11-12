@@ -86,7 +86,7 @@ startBtn.addEventListener("click",()=>{
 //gracze
 let p1 = document.getElementById("p1");
 let p2 = document.getElementById("p2");
-let turn = 0;
+let turn = 2;
 
 //wynik
 let p1scoreText = document.getElementById("p1score");
@@ -122,10 +122,12 @@ function miss(){
     setTimeout(()=>{
         b.style.transition = "2s linear";
         if(turn == 1){
+            turn = 2;
             b.style.left = "100%";
             bY =  Math.floor(Math.random() * (85 - 10 + 1)) + 10;
             b.style.top = bY + "%";
         }else{
+            turn = 1;
             b.style.left = "-40px";
             bY =  Math.floor(Math.random() * (85 - 10 + 1)) + 10;
             b.style.top = bY + "%";
@@ -147,20 +149,20 @@ function moveBall(path){
         bY =  Math.floor(Math.random() * (85 - 10 + 1)) + 10 + "%";
     }
     else if(path == 2){
-    b.style.transition = "2s linear";
+    b.style.transition = "1.5s linear";
     bY = "96%"
     bX = Math.floor(Math.random() * (60 - 40 + 1)) + 40 + "%"
     setTimeout(()=>{
         moveBall(1);
-    },2000)
+    },1500)
     }
     else if(path == 3){
-    b.style.transition = "2s linear";
+    b.style.transition = "1.5s linear";
     bY = "1%"
     bX = Math.floor(Math.random() * (60 - 40 + 1)) + 40 + "%"
     setTimeout(()=>{
         moveBall(1);
-    },2000)
+    },1500)
     }
     b.style.left = bX;
     b.style.top = bY;
@@ -202,7 +204,7 @@ function gameLoop(){
     }
 
     //obsługa kolizji dla gracza1
-    if (isColliding(p1, b)) {
+    if (isColliding(p1, b) && turn == 1){
     turn = 2;
     p1score++;
     p1scoreText.textContent = p1score;
@@ -218,7 +220,7 @@ function gameLoop(){
     }
 
     //obsługa kolizji dla gracza2
-    if (isColliding(p2, b)) {
+    if (isColliding(p2, b) && turn == 2) {
     turn = 1;
     p2score++;
     p2scoreText.textContent = p2score;
