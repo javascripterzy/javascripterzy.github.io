@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paletkarz</title>
+    <script src="pong.js" defer></script>
+    <link rel="stylesheet" href="pong.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="menu">
+        <h1>Paletkarz</h1>
+        <div>
+            <input type="text" name="" id="p1nickInput" placeholder="Gracz1" class="notset">
+            <input type="text" name="" id="p2nickInput" placeholder="Gracz2" class="notset">
+        </div>
+        <div class="btn" id="start">START</div>
+    </section>
+    <section id="count">
+        <p id="counter">3</p>
+    </section>
+    <section id="gameSpace">
+        <div id="borderTop" class="border"></div>
+        <div id="borderBottom" class="border"></div>
+        <div id="ball"></div>
+        <section class="space">
+            <section class="scoreSpace">
+                <p class="score" id="p1score">0</p>
+                <p class="nick" id="p1nick">Gracz1</p>
+            </section>
+            <div class="player" id="p1"></div>
+        </section>
+        <section class="space">
+            <section class="scoreSpace">
+                <p class="score" id="p2score">0</p>
+                <p class="nick" id="p2nick">Gracz2</p>
+            </section>
+            <div class="player" id="p2"></div>
+        </section>
+    </section>
+</body>
+</html>

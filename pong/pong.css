@@ -1,0 +1,167 @@
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#gameSpace{
+    width: 100%;
+    height: 100%;
+    display:none;
+}
+
+#menu{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    gap:20px;
+}
+
+#menu h1{
+    font-size: 5em;
+    margin: 0;
+}
+
+#menu input{
+    border: 5px solid white;
+    padding:10px;
+    font-size:1.5em;
+    width: 200px;
+    margin:10px;
+    font-family: "Jersey 10";
+    
+}
+
+.notset{
+    background-color: black;
+    color:white;
+    transition: 0.5s ease;
+}
+
+.set{
+    transition: 0.5s ease;
+    color:black;
+    background-color: white;
+}
+
+.btn{
+    border: 5px solid white;
+    background-color: black;
+    color:white;
+    padding:20px;
+    font-size:1.5em;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transition: 0.5s ease;
+    color:black;
+    background-color: white;
+    transform: rotate3d(1,0.5,0.5,360deg) scale(1.2);
+}
+
+body,html{
+    height: 100%;
+    margin:0;
+    overflow: hidden;
+    font-family: "Jersey 10";
+}
+
+.space{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    float:left;
+    border: 10px dashed white;
+    box-sizing: border-box;
+}
+
+
+.scoreSpace{
+    width:100%;
+    text-align: center;
+}
+
+.score{
+    color:white;
+    font-size: 5em;
+    margin:0;
+    transition: 0.5s ease;
+}
+
+.nick{
+    color:rgb(196, 196, 196);
+    margin:0;
+    font-size: 2em;
+}
+
+.player{
+    width: 2%;
+    height: 18%;
+    background-color: white;
+    position: absolute;
+    top:50%;
+    transition: 0.1s linear;
+}
+
+#p1{
+    left:3%;
+}
+
+#p2{
+    right: 3%;
+}
+
+#ball{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: white;
+    left:49%;
+    top:50%;
+    transition: 2s linear;
+}
+
+.scoreGain{
+    transform: scale(1.5);
+    transition: 0.5s ease;
+}
+
+#count{
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    position: absolute;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#count p{
+    font-size: 15em;
+    text-shadow: 10px 10px 0 black;
+}
+
+.border{
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: white;
+}
+
+#borderTop{
+    top:0px;
+}
+
+#borderBottom{
+    bottom:0px;
+}
